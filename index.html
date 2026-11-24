@@ -43,7 +43,8 @@
 <footer class="foot">HOME RECEPTION · VISITOR MANAGEMENT PORTAL<br>Responsive design · Mobile / Tablet / Desktop</footer>
 </main><script>
 const $=id=>document.getElementById(id),DATA='homeReceptionData',PASS='homeReceptionAdminHash',PREF='homeReceptionDevicePrefs';
-const getData=()=>{try{return JSON.parse(localStorage.getItem(DATA)||'[]').map(x=>({...x,status:x.status||'未対応'}))}catch{return[]}},setData=d=>localStorage.setItem(DATA,JSON.stringify(d));\nlet pendingVisit=null;
+const getData=()=>{try{return JSON.parse(localStorage.getItem(DATA)||'[]').map(x=>({...x,status:x.status||'未対応'}))}catch{return[]}},setData=d=>localStorage.setItem(DATA,JSON.stringify(d));
+let pendingVisit=null;
 function show(id){['visitorView','confirmView','thanksView','loginView','adminView','settingsView'].forEach(x=>$(x).classList.toggle('hidden',x!==id));window.scrollTo({top:0,behavior:'smooth'})}
 function hash(s){let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return(h>>>0).toString(16)}
 function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
