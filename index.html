@@ -19,7 +19,7 @@ body.compact .panel{padding:16px}body.large-text{--scale:1.12}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 @media print{.header,.intro,.nav,.admin-actions,.toolbar,.footer,.note,.form-actions{display:none!important}body{background:white;color:black}.app{max-width:none;padding:0}.page{display:none!important}#adminPage{display:block!important}.panel{box-shadow:none;border:0;padding:0}.table-wrap{overflow:visible}table{min-width:0;font-size:9px}th,td{padding:6px}}
 </style>
-</head>
+<style>.folio-policy-entry{padding:14px 16px 22px;text-align:center;font:12px/1.7 -apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;color:#777}.folio-policy-entry a{color:inherit;text-decoration:underline;text-underline-offset:3px}</style></head>
 <body>
 <main class="app">
 <header class="header">
@@ -127,5 +127,5 @@ $('saveSettings').onclick=()=>{saveSettings();alert('端末設定を保存しま
 $('resetSettings').onclick=()=>{localStorage.removeItem(PREF_KEY);loadSettings();applySettings({});alert('設定を初期状態に戻しました。')};
 $('settingsReturn').onclick=()=>page(loggedIn?'adminPage':'visitorPage');
 </script>
-</body>
+<div class="folio-policy-entry"><a href="https://u5kq.github.io/folio.jp/policy.html#reception" target="_blank" rel="noopener noreferrer">folio 利用ポリシー・プライバシー ↗</a></div></body>
 </html>
