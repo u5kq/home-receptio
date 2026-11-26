@@ -127,5 +127,16 @@ $('saveSettings').onclick=()=>{saveSettings();alert('端末設定を保存しま
 $('resetSettings').onclick=()=>{localStorage.removeItem(PREF_KEY);loadSettings();applySettings({});alert('設定を初期状態に戻しました。')};
 $('settingsReturn').onclick=()=>page(loggedIn?'adminPage':'visitorPage');
 </script>
-<div class="folio-policy-entry"><a href="https://u5kq.github.io/folio.jp/policy.html#reception" target="_blank" rel="noopener noreferrer">folio 利用ポリシー・プライバシー ↗</a></div></body>
+<div class="folio-policy-entry"><a href="https://u5kq.github.io/folio.jp/policy.html#reception" target="_blank" rel="noopener noreferrer">folio 利用ポリシー・プライバシー ↗</a></div>
+<style id="folio-device-optimization">
+/* HOME RECEPTION DEVICE OPTIMIZATION — 2026 */
+html{scroll-padding-top:12px}
+body{overflow-x:clip}
+button,input,select,textarea{touch-action:manipulation}
+@media (pointer:coarse){button,.nav button{min-height:44px}input,select,textarea{font-size:16px}}
+@media (min-width:801px) and (max-width:1100px){.app{max-width:1100px;padding-left:24px;padding-right:24px}.layout{grid-template-columns:minmax(0,1.1fr) minmax(270px,.9fr);gap:14px}.panel{padding:22px}.toolbar{grid-template-columns:minmax(180px,1.5fr) repeat(2,minmax(120px,1fr))}}
+@media (max-width:520px){.app{padding-left:12px;padding-right:12px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.header{gap:10px}.brand{letter-spacing:.08em}}
+
+</style>
+</body>
 </html>
