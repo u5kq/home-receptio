@@ -138,5 +138,11 @@ button,input,select,textarea{touch-action:manipulation}
 @media (max-width:520px){.app{padding-left:12px;padding-right:12px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.header{gap:10px}.brand{letter-spacing:.08em}}
 
 </style>
+
+<style id="home-reception-device-v2">
+/* Reception tablet portrait: visitor form first, admin tools below */
+@media (min-width:521px) and (max-width:800px){.app{width:min(100% - 36px,720px)}.header{align-items:flex-start;flex-wrap:wrap}.header-right{width:100%;display:flex;flex-wrap:wrap;gap:8px}.layout{grid-template-columns:minmax(0,1fr)}.panel{padding:22px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.app{width:calc(100% - 24px)}.header{align-items:flex-start}.header-right{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%}.header-right>*{min-width:0}.intro h1{font-size:clamp(36px,11vw,52px)}}
+</style>
 </body>
 </html>
